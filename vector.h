@@ -54,7 +54,7 @@ void *vec_grow(void *v, size_t inc, uint16_t augment) {
 	uint16_t ncap = dcap > min ? dcap : min;
 	uint16_t *p;
 	
-	p = realloc(v ? (uint16_t *)(v) - 2 : NULL, 4 + (inc * ncap));
+	p = (uint16_t *)realloc(v ? (uint16_t *)v - 2 : NULL, 4 + (inc * ncap));
 	if (!p) {
 		return (void *)-1;
 	}
@@ -99,7 +99,7 @@ void *dvec_grow(void *v, size_t inc, uint16_t augment) {
 	uint32_t ncap = dcap > min ? dcap : min;
 	uint32_t *p;
 	
-	p = realloc(v ? (uint32_t *)(v) - 2 : NULL, 4 + (inc * ncap));
+	p = (uint32_t *)realloc(v ? (uint32_t *)v - 2 : NULL, 4 + (inc * ncap));
 	if (!p) {
 		return (void *)-1;
 	}

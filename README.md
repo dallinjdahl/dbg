@@ -2,5 +2,5 @@
 libraries to aid with debugging
 
 # TODO
-will consist of an allocation tracking wrapper for malloc et al.
+Will consist of an allocation tracking wrapper for malloc et al. and
 will have a dynamic hashmap implementation as well.
